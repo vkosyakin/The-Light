@@ -8,7 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var isLightOn = false
+    var isLightOn = true
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +27,7 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed() {
         isLightOn .toggle()
         updateUI()
-        print(#line,#function,isLightOn)
+        
     }
 }
 
